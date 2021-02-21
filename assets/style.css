@@ -1,9 +1,7 @@
 
-
-/* Please ❤ this if you like it! */
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+
 
 /* #Primary
 ================================================== */
@@ -357,49 +355,6 @@ body.hero-anime #switch{
 	box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
 	background: #fff;
 }
-.nav-item .dropdown-menu {
-    transform: translate3d(0, 10px, 0);
-    visibility: hidden;
-    opacity: 0;
-	max-height: 0;
-    display: block;
-	padding: 0;
-	margin: 0;
-    transition: all 200ms linear;
-}
-.nav-item.show .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-	max-height: 999px;
-    transform: translate3d(0, 0px, 0);
-}
-.dropdown-menu {
-	padding: 10px!important;
-	margin: 0;
-	font-size: 13px;
-	letter-spacing: 1px;
-	color: #212121;
-	background-color: #fcfaff;
-	border: none;
-	border-radius: 3px;
-	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
-    transition: all 200ms linear;
-}
-.dropdown-toggle::after {
-	display: none;
-}
-
-.dropdown-item {
-	padding: 3px 15px;
-	color: #212121;
-	border-radius: 2px;
-    transition: all 200ms linear;
-}
-.dropdown-item:hover, 
-.dropdown-item:focus {
-	color: #fff;
-	background-color: rgba(129,103,169,.6);
-}
 
 body.dark{
 	color: #fff;
@@ -433,14 +388,7 @@ body.dark .nav-link{
 body.dark .nav-item.active .nav-link{
 	color: #999 !important;
 }
-body.dark .dropdown-menu {
-	color: #fff;
-	background-color: #1f2029;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-}
-body.dark .dropdown-item {
-	color: #fff;
-}
+
 body.dark .navbar-light .navbar-toggler-icon {
 	border-bottom: 1px solid #fff;
 }
@@ -476,63 +424,182 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 		background-color: #000;
 		vertical-align: 0;
 	}
-	.dropdown-toggle::after {
-		position: absolute;
-		display: block;
-		top: 10px;
-		left: -23px;
-		width: 1px;
-		height: 11px;
-		content: "";
-		border: none;
-		background-color: #000;
-		vertical-align: 0;
-		transition: all 200ms linear;
-	}
-	.dropdown-toggle[aria-expanded="true"]::after{
-		transform: rotate(90deg);
-		opacity: 0;
-	}
-	.dropdown-menu {
-		padding: 0 !important;
-		background-color: transparent;
-		box-shadow: none;
-		transition: all 200ms linear;
-	}
-	.dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
-		margin-top: 10px !important;
-		margin-bottom: 20px !important;
-	}
+	
 	body.dark .nav-item::before {
 		background-color: #fff;
 	}
-	body.dark .dropdown-toggle::after {
-		background-color: #fff;
-	}
-	body.dark .dropdown-menu {
-		background-color: transparent;
-		box-shadow: none;
-	}
 }
-
-/* #Link to page
-================================================== */
-
-.logo {
-	position: absolute;
-	bottom: 30px;
-	right: 30px;
-	display: block;
-	z-index: 100;
-	transition: all 250ms linear;
-}
-.logo img {
-	height: 26px;
-	width: auto;
-	display: block;
-  filter: brightness(10%);
-	transition: all 250ms linear;
-}
-body.dark .logo img {
-  filter: brightness(100%);
-}
+.skills-diagram {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 35em;
+    margin: 2em auto 2em;
+  }
+  .skills-diagram > dd {
+    /* Hide inner attributes */
+    display: none;
+  }
+  .skills-diagram dt {
+    display: inline-block;
+    vertical-align: top;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    
+    -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    
+    /* set defaults to skill-2 */
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+  }
+  
+  .skills-diagram dt:hover {
+    -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3);
+  }
+  
+  /* Support vertical mode */
+  .skills-diagram-vertical dt {
+    display: block;
+    /* .25em is an equivalent to inline-block's horizontal whitespace margin */
+    margin: .25em auto;
+  }
+  
+  /* Provide 10 different sizes */
+  .skills-diagram .skill-2 {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    
+    background-color: rgba(201, 155, 129, .3);
+    border-color: rgba(201, 155, 129, 1);
+    color: rgba(201, 155, 129, 1);
+  }
+  .skills-diagram .skill-3 {
+    vertical-align: middle;
+    
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    background-color: rgba(138, 138, 140, .3);
+    border-color: rgba(138, 138, 140, 1);
+    color: rgba(138, 138, 140, 1);
+  }
+  .skills-diagram .skill-4 {
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    
+    background-color: rgba(234, 112, 97, .3);
+    border-color: rgba(234, 112, 97, 1);
+    color: rgba(234, 112, 97, 1);
+  }
+  .skills-diagram .skill-5 {
+    vertical-align: bottom;
+  
+    width: 7em;
+    height: 7em;
+    line-height: 7em;
+    background-color: rgba(109, 182, 173, .3);
+    border-color: rgba(109, 182, 173, 1);
+    color: rgba(109, 182, 173, 1);
+  }
+  .skills-diagram .skill-6 {
+    vertical-align: top;
+    
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    
+    background-color: rgba(195, 192, 100, .3);
+    border-color: rgba(195, 192, 100, 1);
+    color: rgba(195, 192, 100, 1);
+  }
+  .skills-diagram .skill-7 {
+    width: 7em;
+    height: 7em;
+    line-height: 7em;
+    
+    background-color: rgba(214, 89, 102, .3);
+    border-color: rgba(214, 89, 102, 1);
+    color: rgba(214, 89, 102, 1);
+  }
+  .skills-diagram .skill-8 {
+    vertical-align: bottom;
+    
+    width: 8em;
+    height: 8em;
+    line-height: 8em;
+    background-color: rgba(46, 138, 75, .3);
+    border-color: rgba(46, 138, 75, 1);
+    color: rgba(46, 138, 75, 1);
+  }
+  .skills-diagram .skill-9 {
+    width: 12em;
+    height: 12em;
+    line-height: 12em;
+    
+    background-color: rgba(177, 18, 2, .3);
+    border-color: rgba(177, 18, 2, 1);
+    color: rgba(177, 18, 2, 1);
+  }
+  .skills-diagram .skill-10 {
+    width: 14em;
+    height: 14em;
+    line-height: 14em;
+    background-color: rgba(81, 112, 144, .3);
+    border-color: rgba(81, 112, 144, 1);
+    color: rgba(81, 112, 144, 1);
+  }
+  .skills-diagram .skill-11 {
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    background-color: rgba(81, 112, 144, .3);
+    border-color: rgba(81, 112, 144, 1);
+    color: rgba(81, 112, 144, 1);
+  }
+  .skills-diagram .skill-12 {
+    width: 8em;
+    height: 8em;
+    line-height: 8em;
+    background-color: rgba(81, 144, 144, 0.3);
+    border-color: rgba(81, 144, 144, 1);
+    color: rgba(81, 112, 144, 1);
+  }
+  .skills-diagram .skill-13 {
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    background-color: rgba(144, 81, 95, 0.3);
+    border-color: rgb(144, 81, 97);
+    color: rgb(144, 81, 86);
+  }
+  
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+  }
+  
+  a {
+    color: grey;
+  }
+  a:hover {
+    color: #ccc;
+  }
+  h1 {
+    color: #cecece;
+    text-shadow: 0 1px 1px #fff;
+  }
