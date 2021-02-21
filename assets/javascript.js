@@ -38,10 +38,12 @@
 		if ($("body").hasClass("dark")) {
 			$("body").removeClass("dark");
 			$("#switch").removeClass("switched");
+			$("#switch-light").html("Passer en mode sombre");
 		}
 		else {
 			$("body").addClass("dark");
 			$("#switch").addClass("switched");
+			$("#switch-light").html("Passer en mode clair");
 		}
 	});  
 	
