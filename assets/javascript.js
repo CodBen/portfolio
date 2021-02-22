@@ -97,36 +97,3 @@
   });
 
 
-//   API STEAM
-
-const url = 'http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=381210&key=90FD73BE9E7FC2FEECB97258E9C79786&steamid=76561198036456872';
-// Je stocke l'url de l'api
-
-    function recupererSucess() {
-        let requete = new XMLHttpRequest();
-        // Je crée l'objet qui récupère les infos 
-
-        requete.open('GET', url);
-        // j'ouvre l'url
-
-        requete.responseType = 'json';
-        // Je précise quel est le format de l'url
-
-        requete.send();
-        // J'envoie ma demande
-
-        requete.onload = function() {
-            if (requete.readyState === XMLHttpRequest.DONE) {
-                if (requete.status === 200) {
-                    let reponse = requete.response;
-                    let success = reponse.playerstats.achievements;
-                    console.log(success)
-                    document.querySelector('#sucess').textContent = success;
-                } else {
-                    alert('un problème est survenu');
-            }
-        }
-    }
-	console.log('prix actualisé');
-}
-recupererSucess();

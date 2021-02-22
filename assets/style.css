@@ -2,12 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 
+* {
+  box-sizing: border-box;
+}
+
+
 
 /* #Primary
 ================================================== */
 
 body{
-    font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
@@ -868,8 +874,9 @@ a.btn {
     background: rgba(0, 0, 0, 0.075);
     display: inline-block;
     margin: 8px;
+    padding: 0px;
     max-width: 300px;
-    perspective: 1000;
+    perspective: 1000px;
     position: relative;
     text-align: left;
     transition: all 0.3s 0s ease-in;
@@ -1013,6 +1020,79 @@ a.btn {
       transition: all 0.3s 0.2s ease-out;
     }
   
+
+/* .card-hobbie .row {
+  max-width: 900px;
+  margin: 50px auto 0;
+} */
+
+/* .card-hobbie .card {
+  float: left;
+  padding: 0 1.7rem;
+  width: 50%;
+} */
+
+.card-hobbie .wrapper {
+    background-color: white;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(rgb(0, 0, 0), 0.3), 0 15px 12px rgba(rgb(0, 0, 0), 0.2);
+  }
+   
+    .wrapper:hover .data {
+        transform: translateY(0);
+      }
+
   
+  .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(70px + 1em));
+    transition: transform 0.3s;
+  }
+  .data .content {
+      padding: 1em;
+      position: relative;
+      z-index: 1;
+    }
   
-  
+  .card-hobbie .author {
+    font-size: 12px;
+    color: white;
+  }
+  .card-hobbie .title {
+    margin-top: 20px;
+  }
+  .card-hobbie .text {
+    height: 70px;
+    margin: 0;
+    color: white;
+  }
+
+
+
+   .card-1 .wrapper {
+    background: url(https://usbeketrica.com/media/1669/download/59f7515a3c020.jpg?v=1&inline=1) center / cover;
+  }
+     
+  .card-2 .wrapper {
+    background: url(https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/65251a0416_50149063_2-developpeur-informatique1.jpg) center / cover;
+  }      
+
+  .card-3 .wrapper {
+    background: url(https://lp-cms-production.imgix.net/2019-06/9d06864e1a551111cd5115d0310489a8-madrid.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1312) center / cover;
+  }      
+
+  .card-4 .wrapper {
+    background: url(https://media.giphy.com/media/yr7n0u3qzO9nG/giphy.gif) center / cover;
+  }  
+
+  .card-5 .wrapper {
+    background: url(https://yt3.ggpht.com/ytc/AAUvwni_LdnpDi-SOIhjp4Kxo2l_yVBoYsfdDCpUM5VDzg=s900-c-k-c0x00ffffff-no-rj) center / cover;
+  }      
+
+  .card-6 .wrapper {
+    background: url(https://frontiersinblog.files.wordpress.com/2017/05/frontiers-in-psychology-group-music-depression.jpg) center / cover;
+  }      
