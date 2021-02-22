@@ -460,7 +460,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       -ms-transform: scale(1.2);
       transform: scale(1.2);
     
-    /* set defaults to skill-2 */
+
     width: 2em;
     height: 2em;
     line-height: 2em;
@@ -474,14 +474,14 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       transform: scale(1.3);
   }
   
-  /* Support vertical mode */
+
   .skills-diagram-vertical dt {
     display: block;
-    /* .25em is an equivalent to inline-block's horizontal whitespace margin */
+
     margin: .25em auto;
   }
   
-  /* Provide 10 different sizes */
+
   .skills-diagram .skill-2 {
     width: 2em;
     height: 2em;
@@ -868,6 +868,7 @@ a.btn {
     margin: 80px auto;
     max-width: 960px;
     text-align: center;
+
   }
 
   div.card {
@@ -882,6 +883,7 @@ a.btn {
     transition: all 0.3s 0s ease-in;
     width: 300px;
     z-index: 1;
+    border: 0px;
   }
 
     
@@ -1021,17 +1023,6 @@ a.btn {
     }
   
 
-/* .card-hobbie .row {
-  max-width: 900px;
-  margin: 50px auto 0;
-} */
-
-/* .card-hobbie .card {
-  float: left;
-  padding: 0 1.7rem;
-  width: 50%;
-} */
-
 .card-hobbie .wrapper {
     background-color: white;
     min-height: 540px;
@@ -1096,3 +1087,6 @@ a.btn {
   .card-6 .wrapper {
     background: url(https://frontiersinblog.files.wordpress.com/2017/05/frontiers-in-psychology-group-music-depression.jpg) center / cover;
   }      
+
+
+

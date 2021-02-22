@@ -58,7 +58,7 @@
 	
 	$("div.card").click(function(e){
 	  e.preventDefault();
-  
+		
 	  var isShowing = false;
   
 	  if ($(this).hasClass("show")) {
@@ -97,3 +97,57 @@
   });
 
 
+
+
+var states = ["mettre en place une bdd", "créer un crud en php", "utiliser une api", "animer votre site avec JS", "créer votre site sur symfony 5", "créer un espace client", "rendre votre site responsive", "développer un site vitrine"];
+var h = document.querySelector("#writeon");
+
+var typeState = function(s) {
+  h.innerHTML += s[0];
+  if (s.length > 1) {
+    setTimeout(function() {
+      typeState(s.substr(1));
+    }, 100);
+  }
+};
+
+var resetState = function() {
+  if (h.innerHTML.length < 7) {
+    h.innerHTML = "Pour vous, je peux ";
+  }
+  if (h.innerHTML != "Pour vous, je peux ") {
+    h.innerHTML = h.innerHTML.substring(0, h.innerHTML.length - 1);
+    setTimeout(function() {
+      resetState();
+    }, 100);
+  }
+};
+
+var idle = function(s) {
+  if (s % 2 == 0) {
+    h.innerHTML += "|";
+  } else {
+    h.innerHTML = h.innerHTML.substring(0, h.innerHTML.length - 1);
+  }
+  if (s > 1) {
+    setTimeout(function() {
+      idle(s - 1);
+    }, 500);
+  } else {
+    resetState();
+  }
+};
+
+var cState = -1;
+var writeon = function() {
+  cState = (cState + 1) % states.length;
+  typeState(states[cState]);
+  setTimeout(function() {
+    idle(6);
+  }, 100 * states[cState].length + 100);
+  setTimeout(function() {
+    writeon();
+  }, 200 * states[cState].length + 500 * 6);
+};
+
+writeon();
